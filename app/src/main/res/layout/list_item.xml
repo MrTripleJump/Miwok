@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -16,35 +16,48 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_item_height"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:id="@+id/textContainer">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:id="@+id/textContainer"
+        android:background="@color/category_numbers"
+        android:layout_toRightOf="@id/launcher"
+        android:layout_toEndOf="@+id/launcher">>
+
 
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="lutti"
-            android:id="@+id/lutti"/>
+            android:id="@+id/lutti"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:text="lutti" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="one"
-            android:id="@+id/one"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:text="one" />
+    </LinearLayout>
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:id="@+id/playbutton"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
                 android:src="@drawable/ic_play_arrow_white_24dp"
-                android:layout_marginLeft="220dp"/>
+                android:layout_centerVertical="true"/>
 
-        </LinearLayout>
-    </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
